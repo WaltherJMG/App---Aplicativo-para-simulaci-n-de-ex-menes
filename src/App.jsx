@@ -670,11 +670,11 @@ function ProgressScreen({ stats, summary, resetToHome }) {
         ) : (
           stats.map((attempt) => (
             <div className="attempt-row" role="row" key={attempt.id}>
-              <span>{new Date(attempt.date).toLocaleDateString("es-EC")}</span>
-              <span>{attempt.subject}</span>
-              <span>{attempt.difficulty}</span>
-              <strong>{attempt.percentage}%</strong>
-              <span>{attempt.duration} min</span>
+              <span className="attempt-date">{new Date(attempt.date).toLocaleDateString("es-EC")}</span>
+              <span className="attempt-subject">{attempt.subject}</span>
+              <span className="attempt-level">{attempt.difficulty}</span>
+              <strong className="attempt-score">{attempt.percentage}%</strong>
+              <span className="attempt-time">{attempt.duration} min</span>
             </div>
           ))
         )}
